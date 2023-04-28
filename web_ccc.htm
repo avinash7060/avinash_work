@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    h3 {
+        background-color: aqua;
+        color: blue;
+    }
+
+    p {
+        background-color: orange;
+        color: blue;
+    }
+
+    [name="avi-1"] {
+        background-color: olive;
+        color: red;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #avi-id {
+        background-color: rgb(238, 30, 221);
+        color: rgb(168, 162, 162);
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .avi-class {
+        background-color: rgb(120, 212, 107);
+        color: rgb(211, 148, 31);
+        text-align: center;
+        font-size: 30px;
+    }
+
+    * {
+        background-color: rgb(182, 209, 214);
+    }
+
+    #avin-id {
+        background-color: rgb(80, 75, 79);
+        color: rgb(168, 162, 162);
+        text-align: center;
+        font-size: 30px;
+        border: 3px;
+        padding: 2%;
+        margin: auto;
+        width: 95%;
+        height: 30%;
+    }
+
+
+    .dotted_border {
+        border-style: dotted;
+    }
+
+    .none_border {
+        border-style: none;
+    }
+
+    .inset_border {
+        border-style: inset;
+    }
+
+    .outset_border {
+        border-style: outset;
+    }
+
+    .solid_border {
+        border-style: solid;
+    }
+
+    #box {
+        float: center;
+        background-color: rgb(238, 30, 221);
+        color: antiquewhite;
+        width: 250px;
+        border: 2px solid rgb(197, 16, 16);
+        padding: 10px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    a:hover {
+        color: orange;
+    }
+
+    /* 
+    #avi1 :is(h1,p) {
+       font-family:arial;
+       color:red;
+
+    } */
+
+    /* :is(#avi1, #avi2) h1{
+        font-family: arial;
+        color: red;
+    } */
+
+    :is(#avi1, #avi2) :is(h1, p) {
+        font-family: arial;
+        color: red;
+    }
+
+    :is(#avi1, #avi2) p:hover {
+        font-family: arial;
+        color: green;
+    }
+
+    table,
+    tr,
+    th {
+        border: 1px solid red;
+        background-color: aquamarine;
+        color: rgb(218, 13, 13);
+
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 10px;
+        widht: 300%;
+    }
+
+    th {
+        vertical-align: top;
+    }
+
+    table {
+        width: 600px;
+        table-layout: auto;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    [class*="col-"] {
+        float: left;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid black;
+        color: orange;
+        background-color: greenyellow;
+        font-size: 15px;
+
+    }
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+</style>
+<style>
+    .maindiv {
+        width: 100%;
+        height: 400px;
+        background-color: blueviolet;
+        position: relative;
+    }
+
+    .div1 {
+        width: 50%;
+        height: 100px;
+        background-color: rgb(131, 120, 100);
+        position: absolute;
+        top:1;
+        left:0;
+    }
+    .div2 {
+        width: 50%;
+        height: 100px;
+        background-color: rgb(27, 23, 245);
+        /* position: absolute;
+        top:1;
+        left:0; */
+    }
+
+    .div3 {
+        width: 50%;
+        height: 100px;
+        background-color: rgb(53, 189, 71);
+        /* position: absolute;
+        top:1;
+        left:0; */
+    }
+    .div4 {
+        width: 50%;
+        height: 100px;
+        background-color: rgb(27, 23, 245);
+        /* position: absolute;
+        top:1;
+        left:0; */
+    }
+
+    #Child_Div1
+ {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 2%;
+    margin: 1%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    width: 20%;
+    height: 10%;
+
+ }
+
+ #Child_Div2
+ {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 2%;
+    margin: 1%;
+    background-color: rgb(255, 0, 255);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    width: 20%;
+    height: 10%;
+
+ }
+
+ #Child_Div3
+ {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 2%;
+    margin: 1%;
+    background-color: #ff6347; /* #RRGGBB */
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    width: 20%;
+    height: 10%;
+
+ }
+
+
+</style>
+
+<body>
+    <center>
+        <!-- <inline> -->
+        <hr>
+        <h2 style="background-color:azure; color:red; text-align: center; font-size: 43px;"> Avinash </h2>
+        <hr>
+        
+        <hr><input type="button" value="Back To Previous" onclick="back_to_prevoius()" />
+
+        <script>
+            
+            function back_to_prevoius() 
+            {
+                 alert("back to history...");
+                 history.back();//for previous page  
+                 history.forward();//for next page  
+                 history.go(2);//for next 2nd page  
+                 history.go(-2);//for previous 2nd page  
+            }
+
+        </script>
+<hr>
+           <!--- internal -->
+        <h3> this is a good friends</h3>
+        <hr>
+        <p> this is a good friends</p>
+        <hr>
+        <!-- name -->
+        <h2 name="avi-1">TC can be expected to vary with the type of intermediary chain that the consumer or buyer
+            follows
+            in the house property /transaction. In principle, taking a loan from a housing </h2>
+
+        <hr>
+        <!-- id -->
+        <h3 id="avi-id">TC can be expected to vary with the type of intermediary chain that the consumer or buyer
+            follows
+        </h3>
+        <hr>
+        <!-- class -->
+        <h3 class="avi-class">TC can be expected to vary with the type of intermediary chain that the consumer or buyer
+            follows
+        </h3>
+        <!-- div -->
+        <div id="avin-id"> Avinash is a good student</div>
+
+        <link rel="stylesheet" href="url">
+        <hr>
+
+        <!-- border-line -->
+        <h3 class="dotted_border"> this is a good friends</h3>
+
+        <h3 class="none_border"> this is a good friends</h3>
+
+        <h3 class="inset_border"> this is a good friends</h3>
+
+        <h3 class="outset_border"> this is a good friends</h3>
+
+        <h3 class="solid_border"> this is a good friends</h3>
+
+
+
+
+        <hr>
+
+        <!-- box_modal -->
+        <div>commercial and industrial activity not only rge in commercial and industrial activity not only in the</div>
+
+        <div id="box">
+            <p> this is a good friends this is a good friends</p>
+        </div>
+        <hr>
+        <p> <a href="url" target="_black"> </a> </p>
+
+
+        <div id="avi1">
+            <h1> this is a good friends</h1>
+            <p> TC can be expected to vary with the type of intermediary chain that the consumer or buyer follows</p>
+        </div>
+
+        <div id="avi2">
+            <h1> this is a good f</h1>
+            <p> TC can be expected to vary with the type of intermediary chain that the consumer or buyer follows</p>
+        </div>
+
+        <hr>
+
+        <h1> this is a good f</h1>
+        <p> TC can be expected to vary with the type of intermediary chain that the consumer or buyer follows</p>
+        <h1> this is a good friends</h1>
+        <p> TC can be expected to vary with the type of intermediary chain that the consumer or buyer follows</p>
+
+        <hr>
+        <h1> Css table/from</h1>
+        <form action="#" method="post" target="_blank" enctype="multipart/form-data">
+
+            <table border="1" width="30" cellpadding="20" cellspacting="5">
+
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 1</th>
+                    <th> S.no :</th>
+                    <th> <input type="text" name="S.no"></th>
+                </tr>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 2</th>
+                    <th> Module :</th>
+                    <th> <input type="text" name="Module"></th>
+                </tr>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 3</th>
+                    <th> Module no </th>
+                    <th> <input type="text" name="Module no"> </th>
+                </tr>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 4</th>
+                    <th> Report UIDN :</th>
+                    <th> <input type="text" name="Report UIDN"> </th>
+                </tr>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 5</th>
+                    <th> Report Name TC can be expected to vary with the type of intermediary chain that the consumer or
+                        buyer follows </th>
+                    <th> <input type="text" name="Report Name"> </th>
+                </tr>
+
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 12</th>
+                    <th> Report_link : </th>
+                    <th> <input type="text" name="Report_link"> </th>
+                </tr>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 13</th>
+                    <th> state :</th>
+                    <th> <select id="state" name="state">
+                            <option value="up">Delhi </option>
+                            <option value="mp">UP </option>
+                            <option value="jewar">MP </option>
+                            <option value="noida">RJ </option>
+                        </select></th>
+                </tr><br>
+                <tr style="background-color:yellow; color:blue;">
+                    <th> 14</th>
+                    <th> File : </th>
+                    <th> <input type="file" name="file"> </th>
+                </tr>
+
+                <hr>
+
+            </table><br>
+
+            <input type="submit" name="submit">
+            <input type="reset" name="cancel"><br>
+
+            </from><br>
+    </center>
+      <!-- graid -->
+    <div class="row">
+        <div class="col-6"> col1 </div>
+
+        <div class="col-6"> col2</div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12"> Col 1 </div>
+
+
+
+    </div>
+    <!-- z-indix -->
+    <h1> z-indix</h1><br>
+    <hr>
+
+    <div class="maindiv">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+<hr>
+
+<div id="Child_Div1">Avinash</div>
+        <div id="Child_Div2">Aakash </div>
+        <div id="Child_Div3">Devashish </div>
+
+</body>
+
+</html>
